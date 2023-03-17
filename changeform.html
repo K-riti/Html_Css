@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <title>
+        Registration Page
+    </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="form.css">
+    <!-- <script>
+        function phonenumber(inputtxt) {
+            var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (inputtxt.value.match(phoneno)) { return true; }
+            else { alert("Not a valid Phone Number"); return false; }
+        }
+    </script> -->
+</head>
+
+<body>
+    <a href="Index.html"><i class="fas fa-home"></i></a>
+    <div class="form">
+        <form onsubmit="return Validate()">
+            <h2> Registration Form</h2>
+
+            <label> Firstname: </label>
+            <input type="text" name="firstname" id="f1" font-size="5px"> <br> <br>
+            <label> Middlename: </label>
+            <input type="text" name="middlename" size="25px" /> <br> <br>
+            <label> Lastname: </label>
+            <input type="text" name="lastname" size="25px" required /> <br> <br>
+
+            <!-- <label>
+            C :
+        </label>
+        <select>
+            <option value="Course">Course</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="MBA">MBA</option>
+            <option value="MCA">MCA</option>
+            <option value="M.Tech">M.Tech</option>
+        </select>
+        <br>
+        <br> -->
+            <label>
+                Gender :
+            </label>
+            <input size="18px" type="radio" name="male" /> Male
+            <input type="radio" name="female" /> Female
+            <input type="radio" name="other" /> Other
+            <br>
+            <br>
+
+
+            <label>
+                Phone :
+            </label>
+            <input type="text" name="country code" value="+91" size="2" />
+            <input type="text" name="phone" size="10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /> <br> <br>
+            <!-- <label for="address">Address</label>
+        <br>
+        <textarea cols="40" rows="2" value="address">
+            </textarea>
+        <br> <br> -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /> <br>
+            <br> <br>
+            <label for="password">Password:</label>
+            <input type="Password" id="pass" name="pass" required> <br>
+            <br> <br>
+            <label for="repass"> Re-type password:</label>
+            <input type="Password" id="repassword" name="repass" required> <br> <br>
+            <input type="submit" value="Submit"
+                style="margin-left: 20px;background-color: rgb(218, 140, 67);font-weight: 600;" />
+            <input type="reset" name="reset" id=""
+                style="margin-left: 20px;background-color: rgb(214, 136, 63);font-weight: 600;" />
+        </form>
+    </div>
+
+    <script>
+        var Validate = () => {
+            var fname = document.getElementById(f1).value;
+            if(fname=="")
+            {
+                alert("Name can not be empty");
+                
+            }
+        }
+    </script>
+</body>
+
+</html>
